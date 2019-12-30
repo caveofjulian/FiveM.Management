@@ -23,9 +23,7 @@ namespace FiveM.Integration.Helpers
                 }
             };
             process.Start();
-            string result = process.StandardOutput.ReadToEnd();
-            process.WaitForExit();
-            return result;
-        }
+            return process.StandardOutput.ReadLine();
+       }
     }
 }
